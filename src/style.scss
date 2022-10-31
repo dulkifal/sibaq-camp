@@ -52,6 +52,9 @@ body {
     margin: auto;
   }
 }
+.spBanner{
+  width: 100vw;
+}
 .Cont {
   display: flex;
   text-align: center;
@@ -77,10 +80,18 @@ body {
     button {
       border: none;
       height: 50px;
-      background: black;
+      background: #0e5788;
       color: white;
-      padding: 0 20px;
+      padding: 0 30px;
       cursor: pointer;
+      font-size: 20px;
+      line-height: 1;
+      border-radius: 50px;
+      span{
+        position: relative;
+        top: -7px;
+        margin-left: 10px;
+      }
     }
   }
 

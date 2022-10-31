@@ -18,8 +18,8 @@ let CropArea = document.createElement("div");
 var c;
 let bg = new Image();
 
-let DocW = 1000/2;
-let DocH = 1000/2;
+let DocW = 500;
+let DocH = 500;
 let Cropy = 117/2;
 let Cropx = 150/2;
 let CropH = 736/2;
@@ -58,7 +58,7 @@ export function App(props) {
   function draw() {
     if (BgLoadStatus && CroppedImgStatus) {
       _ctx.drawImage(CroppedImgTag, Cropx, Cropy);
-      _ctx.drawImage(bg, 0, 0);
+      _ctx.drawImage(bg, 0, 0, _canv.width, _canv.height);
       //_ctx.font = "600 30px Roboto";
       //_ctx.fillStyle = "white";
 
@@ -127,24 +127,45 @@ export function App(props) {
   return (
     <>
       <div
-        style={{ backgroundImage: `url(${bg.src ? bg.src : ""})` }}
+        style={{ backgroundImage: `url(${ GeneratedData?GeneratedData:bg.src })` }}
         className="Header"
       ></div>
       <div className="Cont">
-        <h1>Upload photo</h1>
+        <h1></h1>
+
         <div className="Actions">
           
-          
+       { GeneratedData ?<div>
+            <a href={GeneratedData} download="campaign poster">
+              <button>
+                <AiOutlineDownload size="30" />
+                <span>
+          Download Profile
+          </span>
+              </button>
+            </a>
+            
+         
+          </div>:
           <button
-            onClick={() => {
-              file.click();
-            }}
-          >
-            <AiOutlineCamera size="30" />
-          </button>
+          onClick={() => {
+            file.click();
+          }}
+        >
+          <AiOutlineCamera size="30" />
+        
+          <span>
+          Upload photo
+          </span>
+         
+        </button>
+          }
+          
+          
+          
         </div>
 
-        {GeneratedData && (
+        {/* {GeneratedData && (
           <div className="GetAct">
             <a href={GeneratedData} download="campaign poster">
               <button>
@@ -154,7 +175,7 @@ export function App(props) {
          
          
           </div>)
-        }
+        } */}
       </div>
 
       <div
@@ -165,6 +186,7 @@ export function App(props) {
           }
         }}
       ></div>
+      <img src="fzone.jpg" className="spBanner" alt="" />
       <Preview></Preview>
       <Cropper
         setCroppedImg={setCroppedImg}
@@ -174,6 +196,7 @@ export function App(props) {
     </>
   );
 }
+
 
 function Cropper({ visible, set, setCroppedImg }) {
   return (
