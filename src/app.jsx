@@ -70,7 +70,7 @@ export function App(props) {
 
      // _ctx.fillText(_name, Cropx + CropW / 2 - txtW / 2, Cropy + CropH + 160);
       setGeneratedData(_canv.toDataURL({ pixelRatio: 3 }));
-      document.body.append(_canv)
+
       //console.log(_data);
       // window.open(_data);
     } else {
