@@ -57,7 +57,7 @@ export function App(props) {
 
   function draw() {
     if (BgLoadStatus && CroppedImgStatus) {
-      _ctx.drawImage(CroppedImgTag, Cropx, Cropy);
+      _ctx.drawImage(CroppedImgTag, Cropx, Cropy,CropW,CropH);
       _ctx.drawImage(bg, 0, 0, _canv.width,  _canv.height);
       //_ctx.font = "600 30px Roboto";
       //_ctx.fillStyle = "white";
@@ -101,8 +101,8 @@ export function App(props) {
       
       
       viewport: {
-        height: CropH,
-        width: CropW,
+        height: CropH/2,
+        width: CropW/2,
         type:"circle"
       },
     });
