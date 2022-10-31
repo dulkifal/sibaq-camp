@@ -18,12 +18,12 @@ let CropArea = document.createElement("div");
 var c;
 let bg = new Image();
 
-let DocW = 500;
-let DocH = 500;
-let Cropy = 117/2;
-let Cropx = 150/2;
-let CropH = 736/2;
-let CropW = 736/2;
+let DocW = 1000;
+let DocH = 1000;
+let Cropy = 117;
+let Cropx = 150;
+let CropH = 736;
+let CropW = 736;
 
 export function App(props) {
   let file = document.createElement("input");
@@ -58,7 +58,7 @@ export function App(props) {
   function draw() {
     if (BgLoadStatus && CroppedImgStatus) {
       _ctx.drawImage(CroppedImgTag, Cropx, Cropy);
-      _ctx.drawImage(bg, 0, 0, _canv.width, _canv.height);
+      _ctx.drawImage(bg, 0, 0, _canv.width,  _canv.height);
       //_ctx.font = "600 30px Roboto";
       //_ctx.fillStyle = "white";
 
