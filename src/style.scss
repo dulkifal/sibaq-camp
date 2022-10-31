@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.hi {
+  display: none;
+}
+.vi {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.733);
+  left: 0;
+  top: 0;
+  display: flex;
+  .Crop {
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+  }
+  .Tools {
+    position: absolute;
+    bottom: 0;
+    z-index: 5;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: roboto;
+}
+.Header {
+  display: flex;
+  margin: auto;
+  height: 60vh;
+  width: 100vw;
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+}
+.preview {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.733);
+  left: 0;
+  top: 0;
+  z-index: 50;
+  overflow: auto;
+  display: flex;
+  img {
+    height: 100vh;
+    margin: auto;
+  }
+}
+.Cont {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  place-items: center;
+
+  .Actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+    row-gap: 15px;
+    input {
+      background: none;
+      border: none;
+      height: 50px;
+      padding: 10px 10px;
+      font-size: 18px;
+      outline: none;
+      box-sizing: border-box;
+      border-bottom: solid 2px gray;
+    }
+    button {
+      border: none;
+      height: 50px;
+      background: black;
+      color: white;
+      padding: 0 20px;
+      cursor: pointer;
+    }
+  }
+
+  .process {
+    width: min(80%, 300px);
+    background: rgb(255, 255, 255);
+    margin: 20px 0;
+    border: none;
+    font-size: 20px;
+    padding: 10px 5px;
+    // position: absolute;
+    bottom: 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    &.dis {
+      color: gray;
+      &:hover {
+        color: gray;
+        background: white;
+      }
+    }
+    &:hover {
+      background: black;
+      color: white;
+      transition: 0.6s;
+    }
+  }
+}
+
+.GetAct {
+  a {
+    width: 40px;
+  }
+  button {
+    border: none;
+    color: rgb(77, 73, 112);
+    background: white;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    cursor: pointer;
+  }
+}
+@keyframes anim {
+  0% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  50% {
+    filter: brightness(4) hue-rotate(360deg);
+  }
+  100% {
+    filter: brightness(1) hue-rotate(0deg);
+  }
+}
+.cropieCust{
+  scale: .5;
+}

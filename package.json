@@ -1,0 +1,18 @@
+{
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "croppie": "^2.6.5",
+    "preact": "^10.5.13",
+    "react-icons": "^4.2.0",
+    "sass": "^1.32.12"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.0.0",
+    "vite": "^2.3.7"
+  }
+}
