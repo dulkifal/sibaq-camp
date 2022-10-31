@@ -69,7 +69,8 @@ export function App(props) {
      // _ctx.shadowColor = "black";
 
      // _ctx.fillText(_name, Cropx + CropW / 2 - txtW / 2, Cropy + CropH + 160);
-      setGeneratedData(_canv.toDataURL("image/jpeg"));
+      setGeneratedData(_canv.toDataURL({ pixelRatio: 3 }));
+      document.body.append(_canv)
       //console.log(_data);
       // window.open(_data);
     } else {
@@ -98,12 +99,13 @@ export function App(props) {
       url: Img,
 
       enableOrientation:true,
+     
       
       
       viewport: {
         height: CropH/2,
         width: CropW/2,
-        type:"circle"
+        type:"circle",
       },
     });
   }
@@ -223,7 +225,7 @@ function Cropper({ visible, set, setCroppedImg }) {
           onClick={() => {
             //CroppedImg =
 
-            c.result().then((e) => {
+            c.result({size: {height: CropH, width: CropW}}).then((e) => {
               setCroppedImg(e);
               c.destroy();
               set(false);
