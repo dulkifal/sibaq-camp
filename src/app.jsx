@@ -131,7 +131,7 @@ export function App(props) {
         className="Header"
       ></div>
       <div className="Cont">
-        <h1>UPLOAD YOUR PHOTO BELOW</h1>
+        <h1>Upload photo</h1>
         <div className="Actions">
           
           
