@@ -138,7 +138,7 @@ export function App(props) {
         <div className="Actions">
           
        { GeneratedData ?<div>
-            <a href={GeneratedData} download="campaign poster">
+            <a href={GeneratedData} download="SIBAQ PROFILE PHOTO">
               <button>
                 <AiOutlineDownload size="30" />
                 <span>
@@ -188,7 +188,7 @@ export function App(props) {
           }
         }}
       ></div>
-      <img src="fzone.jpg" className="spBanner" alt="" />
+      <img src="fzone.jpg" className="spBanner" alt=""/>
       <Preview></Preview>
       <Cropper
         setCroppedImg={setCroppedImg}
