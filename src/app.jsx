@@ -20,10 +20,10 @@ let bg = new Image();
 
 let DocW = 1000;
 let DocH = 1000;
-let Cropy = 117;
-let Cropx = 150;
-let CropH = 736;
-let CropW = 736;
+let Cropy = 0;
+let Cropx = 0;
+let CropH = 1000;
+let CropW = 1000;
 
 export function App(props) {
   let file = document.createElement("input");
@@ -105,7 +105,7 @@ export function App(props) {
       viewport: {
         height: CropH/2,
         width: CropW/2,
-        type:"circle",
+        type:"rectangle",
       },
     });
   }
@@ -188,7 +188,7 @@ export function App(props) {
           }
         }}
       ></div>
-      <img src="fzone.jpg" className="spBanner" alt=""/>
+      
       <Preview></Preview>
       <Cropper
         setCroppedImg={setCroppedImg}

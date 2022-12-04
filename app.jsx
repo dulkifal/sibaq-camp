@@ -20,10 +20,10 @@ let bg = new Image();
 
 let DocW = 1000/2;
 let DocH = 1000/2;
-let Cropy = 117/2;
-let Cropx = 150/2;
-let CropH = 736/2;
-let CropW = 736/2;
+let Cropy = 90/2;
+let Cropx = 72/2;
+let CropH = 1000/2;
+let CropW = 1000/2;
 
 export function App(props) {
   let file = document.createElement("input");
@@ -148,7 +148,7 @@ export function App(props) {
           <div className="GetAct">
             <a href={GeneratedData} download="campaign poster">
               <button>
-                <AiOutlineDownload size="40" />
+                <AiOutlineDownload size="30" />
               </button>
             </a>
          
